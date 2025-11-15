@@ -1,0 +1,26 @@
+<div id="auth-bar" style="position: absolute; top: 16px; right: 22px; display: flex; gap: 12px; z-index:1000;"></div>
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+<script>
+function logout() {
+  localStorage.removeItem('user_token');
+  location.reload();
+}
+function renderAuthBar() {
+  const bar = document.getElementById('auth-bar');
+  const token = localStorage.getItem('user_token');
+  if (!token) {
+    bar.innerHTML = `
+      <a href="login.html" style="background:#224e84;color:#fff;text-decoration:none;border-radius:5px;padding: 8px 18px;font-size:15px;">Login</a>
+      <a href="register.html" style="background:#29b33a;color:#fff;text-decoration:none;border-radius:5px;padding: 8px 18px;font-size:15px;">Register</a>`;
+  } else {
+    let username = '';
+    try {
+      username = jwt_decode(token).username || '';
+    } catch (e) {}
+    bar.innerHTML = `
+      <span style="font-size:15px; color:#333;">Logged in as: ${username}</span>
+      <button onclick="logout()" style="background:#c03333; color:#fff; border: none; border-radius: 4px; padding: 8px 18px; font-size: 15px; cursor:pointer;">Logout</button>`;
+  }
+}
+renderAuthBar();
+</script>

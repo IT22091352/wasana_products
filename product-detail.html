@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Product Detail - Wasana Products</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Medicine Envelopes, Paper Bags, Pharmacy Supplies, Sri Lanka" name="keywords">
+        <meta content="View detailed information about our medicine envelopes and place an inquiry." name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Top Header Start -->
+        <div class="top-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="img/logo.png" alt="Wasana Products Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="text-right">
+                            <p style="margin: 0; padding: 10px 0; color: #666;">Serving 30+ Pharmacies & Dispensaries Across Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Header End -->
+        
+        
+        <!-- Header Start -->
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="product-list.html" class="nav-item nav-link">Products</a>
+                            <a href="inquiry.html" class="nav-item nav-link">Order Inquiry</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                        </div>
+                        <div class="navbar-nav ml-auto auth-links"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+        
+        
+        <!-- Breadcrumb Start -->
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="product-list.html">Products</a></li>
+                    <li class="breadcrumb-item active">Product Detail</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+        
+        
+        <!-- Product Detail Start -->
+        <div class="product-detail">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <div class="product-slider-single">
+                            <div><img id="product-image" src="img/product-1.png" alt="Product Image"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-6">
+                        <div class="product-content">
+                            <div class="title">
+                                <h2 id="product-title">Pure White Medicine Envelopes</h2>
+                            </div>
+                            <div class="price">
+                                <span id="product-price">LKR 2,500</span> <small style="font-size: 16px; color: #666;">per bundle</small>
+                            </div>
+                            <div class="details">
+                                <p id="product-description">Premium quality white paper envelopes designed specifically for pharmacies and dispensaries. Made with high-quality paper to ensure durability and professional appearance. Each bundle contains 1000 envelopes.</p>
+                                <p><strong>Bundle Information:</strong> 1 Bundle = 1000 Envelopes</p>
+                                <p><strong>Available Sizes:</strong> Small (S), Medium (M), Large (L)</p>
+                            </div>
+                            <div class="quantity">
+                                <h4>Quantity (Bundles):</h4>
+                                <div class="qty">
+                                    <button class="btn-minus"><i class="fa fa-minus"></i></button>
+                                    <input type="text" id="quantity" value="1" min="1">
+                                    <button class="btn-plus"><i class="fa fa-plus"></i></button>
+                                </div>
+                                <div style="margin-top: 15px;">
+                                    <label><strong>Select Size:</strong></label>
+                                    <select id="product-size" class="custom-select" style="width: 200px; margin-left: 10px;">
+                                        <option value="S">Small (S)</option>
+                                        <option value="M" selected>Medium (M)</option>
+                                        <option value="L">Large (L)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="action" style="margin-top: 20px;">
+                                <div style="margin-bottom: 15px;">
+                                    <button type="button" id="add-to-inquiry" class="btn btn-primary" style="padding: 15px 40px; font-size: 16px; font-weight: 600; display: block; width: 100%; max-width: 400px;">
+                                        <i class="fa fa-shopping-cart"></i> Add to Inquiry Cart
+                                    </button>
+                                </div>
+                                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                                    <a href="inquiry.html" class="btn" style="padding: 13px 30px; font-size: 15px; background: #1f8f3a; color: #fff; text-decoration: none; flex: 1; min-width: 180px; text-align: center;">
+                                        <i class="fa fa-eye"></i> View Cart
+                                    </a>
+                                    <a href="product-list.html" class="btn" style="padding: 13px 30px; font-size: 15px; background: #666; color: #fff; text-decoration: none; flex: 1; min-width: 180px; text-align: center;">
+                                        <i class="fa fa-arrow-left"></i> Back to Products
+                                    </a>
+                                </div>
+                            </div>
+                            <div id="cart-feedback" class="alert" style="display: none; margin-top: 20px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row product-detail-bottom">
+                    <div class="col-lg-12">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="pill" href="#description">Description</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#specifications">Specifications</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="pill" href="#delivery">Delivery Info</a>
+                            </li>
+                        </ul>
+                        
+                        <div class="tab-content">
+                            <div id="description" class="container tab-pane active">
+                                <h4 id="desc-title">Product Description</h4>
+                                <p id="desc-text">Our Pure White Medicine Envelopes are manufactured using premium quality paper to ensure durability and a professional appearance. These envelopes are specifically designed for use in pharmacies and dispensaries across Sri Lanka.</p>
+                            </div>
+                            <div id="specifications" class="container tab-pane fade">
+                                <h4>Specifications</h4>
+                                <ul>
+                                    <li>Premium quality white paper</li>
+                                    <li>Available in sizes: Small (S), Medium (M), Large (L)</li>
+                                    <li>1 Bundle = 1000 Envelopes</li>
+                                    <li>Manufactured in Sri Lanka</li>
+                                    <li>Ideal for pharmacy and dispensary use</li>
+                                </ul>
+                            </div>
+                            <div id="delivery" class="container tab-pane fade">
+                                <h4>Delivery Information</h4>
+                                <p><strong>Primary Delivery Zones:</strong> Rathnapura, Balangoda, Niwithigala, Kalawana, Rakwana</p>
+                                <p><strong>Payment Method:</strong> Cash on Delivery (Island-wide available)</p>
+                                <p><strong>Delivery Time:</strong> Contact us for delivery time estimates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product Detail End -->
+        
+        
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h1>Wasana Products</h1>
+                            <p>
+                                Trusted manufacturer of medicine envelopes (paper bags) for pharmacies and dispensaries in Sri Lanka since 2012. We specialize in high-quality packaging solutions for the pharmaceutical industry.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="product-list.html">Products</a></li>
+                                <li><a href="inquiry.html">Order Inquiry</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Our Products</h3>
+                            <ul>
+                                <li><a href="product-detail.html?product=pure-white">Pure White Envelopes</a></li>
+                                <li><a href="product-detail.html?product=inside-printed">Inside Printed</a></li>
+                                <li><a href="product-detail.html?product=sealed-printed">Sealed Printed</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Get in Touch</h3>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>Sri Lanka</p>
+                                <p><i class="fa fa-envelope"></i>info@wasanaproducts.lk</p>
+                                <p><i class="fa fa-phone"></i>+94 XX XXX XXXX</p>
+                                <p><i class="fa fa-whatsapp"></i>WhatsApp: +94 XX XXX XXXX</p>
+                                <div class="social">
+                                    <a href="https://wa.me/94XXXXXXXXX" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                                    <a href=""><i class="fa fa-facebook"></i></a>
+                                    <a href=""><i class="fa fa-phone"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row payment">
+                    <div class="col-md-12">
+                        <div class="payment-method" style="text-align: center;">
+                            <p style="color: #ffffff; font-size: 18px; margin-bottom: 15px;">Delivery Zones: Rathnapura, Balangoda, Niwithigala, Kalawana, Rakwana | Island-wide Cash on Delivery Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>Copyright &copy; <a href="index.html">Wasana Products</a>. All Rights Reserved. Since 2012</p>
+                    </div>
+
+                    <div class="col-md-6 template-by">
+                        <p>Template Designed By <a href="https://htmlcodex.com" target="_blank">HTML Codex</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->
+        
+        
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+        
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="js/cart-storage.js"></script>
+        <script src="js/product-detail.js"></script>
+    </body>
+</html>
+
+

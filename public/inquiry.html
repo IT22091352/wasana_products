@@ -1,0 +1,40 @@
+<!-- User auth check and logout button for inquiry.html -->
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+<script>
+// Auth protect inquiry page: show form only if logged in
+function showInquiryContent(loggedIn) {
+  document.getElementById('inquiry-content').style.display = loggedIn ? '' : 'none';
+  document.getElementById('inquiry-auth-required').style.display = loggedIn ? 'none' : '';
+}
+var token = localStorage.getItem('user_token');
+if (!token) {
+  showInquiryContent(false);
+} else {
+  showInquiryContent(true);
+  // Show logged-in user name if desired
+  window.addEventListener('DOMContentLoaded', function() {
+    if (window.jwt_decode) {
+      try {
+        var decoded = jwt_decode(token);
+        if (decoded && decoded.username) {
+          document.getElementById('logged-in-user').innerText = 'Logged in as: ' + decoded.username;
+        }
+      } catch (e) {}
+    }
+  });
+}
+function logout() {
+  localStorage.removeItem('user_token');
+  window.location.href = 'login.html';
+}
+</script>
+<div style="position: absolute; top: 18px; right: 24px; display: flex; align-items: center; gap:17px;">
+  <span id="logged-in-user" style="font-size:15px; color:#333;"></span>
+  <button onclick="logout()" style="background:#c03333; color:#fff; border: none; border-radius: 4px; padding: 8px 18px; font-size: 15px; cursor: pointer;">Logout</button>
+</div>
+<div id="inquiry-auth-required" style="max-width: 480px; margin: 60px auto; padding:40px; background: #f5f7fa; border-radius: 10px; text-align: center; font-size:18px; display:none;">
+  <p>You must <a href="login.html">Log in</a> or <a href="register.html">Register</a> to submit an inquiry.</p>
+</div>
+<div id="inquiry-content">
+<!-- ... your full inquiry form goes here ... -->
+</div>

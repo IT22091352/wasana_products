@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Finalize Inquiry - Wasana Products</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Medicine Envelopes, Paper Bags, Pharmacy Supplies, Sri Lanka" name="keywords">
+        <meta content="Submit your Wasana Products order inquiry with bundle counts and delivery details." name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Top Header Start -->
+        <div class="top-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="img/logo.png" alt="Wasana Products Logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-9 text-md-right">
+                        <p class="mb-0" style="padding: 10px 0; color: #666; font-size: 15px;">Supplying medicine envelopes to 30+ pharmacies & dispensaries across Sri Lanka</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Header End -->
+
+
+        <!-- Header Start -->
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                    <a href="#" class="navbar-brand">MENU</a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav m-auto">
+                            <a href="index.html" class="nav-item nav-link">Home</a>
+                            <a href="product-list.html" class="nav-item nav-link">Products</a>
+                            <a href="cart.html" class="nav-item nav-link">Inquiry Cart</a>
+                            <a href="checkout.html" class="nav-item nav-link active">Finalize Inquiry</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                        </div>
+                        <div class="navbar-nav ml-auto auth-links"></div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Breadcrumb Start -->
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="product-list.html">Products</a></li>
+                    <li class="breadcrumb-item"><a href="cart.html">Inquiry Cart</a></li>
+                    <li class="breadcrumb-item active">Finalize Inquiry</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumb End -->
+
+
+        <!-- Inquiry Start -->
+        <div class="checkout">
+            <div class="container">
+                <div class="section-header" style="margin-bottom: 30px;">
+                    <h3>Order Inquiry Form</h3>
+                    <p>Provide your contact details and bundle quantities. Our team will confirm availability and delivery schedule.</p>
+                </div>
+                <form id="inquiry-form" action="inquiry-success.html" method="POST">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="billing-address">
+                                <h2>Customer Information</h2>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Customer Name <span style="color: red;">*</span></label>
+                                        <input class="form-control" type="text" name="customer_name" id="customer_name" placeholder="Full Name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Phone Number <span style="color: red;">*</span></label>
+                                        <input class="form-control" type="tel" name="phone" id="phone" placeholder="+94 XX XXX XXXX" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Email Address <span style="color: red;">*</span></label>
+                                        <input class="form-control" type="email" name="email" id="email" placeholder="your@email.com" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Business / Delivery Address <span style="color: red;">*</span></label>
+                                        <input class="form-control" type="text" name="address" id="address" placeholder="Street, Town" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>City <span style="color: red;">*</span></label>
+                                        <input class="form-control" type="text" name="city" id="city" placeholder="City" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Delivery Method</label>
+                                        <select class="custom-select" name="delivery_method" id="delivery_method" required>
+                                            <option value="Cash on Delivery" selected>Cash on Delivery</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="billing-address" style="margin-top: 30px;">
+                                <h2>Product Information</h2>
+                                <div class="row">
+                                    <div class="col-md-12" id="cart-products-container" style="display: none;">
+                                        <h5 class="mb-3">Selected Products</h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-sm mb-2">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th>Product</th>
+                                                        <th>Size</th>
+                                                        <th>Bundles</th>
+                                                        <th>Notes</th>
+                                                        <th style="width: 70px;">Remove</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="cart-products-body"></tbody>
+                                            </table>
+                                        </div>
+                                        <p class="text-muted" style="font-size: 13px;">Adjust sizes, bundle counts, or notes here before submitting. Remove items if needed, or head back to the <a href="cart.html">Inquiry Cart</a> for a full review.</p>
+                                    </div>
+                                    <div class="col-md-12" id="cart-products-empty" style="display: none;">
+                                        <div class="alert alert-info mb-0">No products in your inquiry cart yet. Use the form below or add items from the product pages.</div>
+                                    </div>
+                                    <div class="col-md-6 single-product-field">
+                                        <label>Select Product <span style="color: red;">*</span></label>
+                                        <select class="custom-select" name="product" id="product" required>
+                                            <option value="">-- Select Product --</option>
+                                            <option value="pure-white">Pure White Medicine Envelopes</option>
+                                            <option value="inside-printed">Inside Printed Envelopes</option>
+                                            <option value="sealed-printed">Sealed Printed Envelopes</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 single-product-field">
+                                        <label>Select Size <span style="color: red;">*</span></label>
+                                        <select class="custom-select" name="size" id="size" required>
+                                            <option value="S">Small (S)</option>
+                                            <option value="M" selected>Medium (M)</option>
+                                            <option value="L">Large (L)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12 single-product-field">
+                                        <label>Quantity (Bundles) <span style="color: red;">*</span></label>
+                                        <div class="qty" style="display: inline-block;">
+                                            <button type="button" class="btn-minus"><i class="fa fa-minus"></i></button>
+                                            <input type="number" name="quantity" id="quantity" value="1" min="1" style="width: 100px; text-align: center;" required>
+                                            <button type="button" class="btn-plus"><i class="fa fa-plus"></i></button>
+                                        </div>
+                                        <small style="display: block; margin-top: 10px; color: #666;">1 Bundle = 1000 Envelopes</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="checkout-summary">
+                                <h2>Order Summary</h2>
+                                <div class="checkout-content">
+                                    <div id="order-summary-cart" style="display: none;">
+                                        <div id="order-summary-cart-items"></div>
+                                        <h4 class="mt-3">Estimated Total: <span id="order-summary-cart-total">LKR 0</span></h4>
+                                    </div>
+                                    <div id="order-summary-single">
+                                        <p>Product: <span id="summary-product">-</span></p>
+                                        <p>Size: <span id="summary-size">-</span></p>
+                                        <p>Quantity: <span id="summary-quantity">-</span> Bundle(s)</p>
+                                        <p>Price per Bundle: <span id="summary-price">LKR 0</span></p>
+                                        <h4>Total: <span id="summary-total">LKR 0</span></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout-payment" style="margin-top: 30px;">
+                                <h2>Delivery Information</h2>
+                                <div class="checkout-content" style="background: rgba(31, 143, 58, .1); color: #666;">
+                                    <p><strong>Primary Zones:</strong> Rathnapura, Balangoda, Niwithigala, Kalawana, Rakwana</p>
+                                    <p><strong>Payment:</strong> Cash on Delivery (Island-wide available)</p>
+                                    <p style="margin-top: 15px; font-size: 14px;">We will call to confirm your inquiry details prior to dispatch.</p>
+                                </div>
+                            </div>
+
+                            <div class="checkout-btn" style="margin-top: 30px;">
+                                <button type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 18px; font-weight: 600;">Submit Inquiry</button>
+                                <p class="text-center text-muted" style="margin-top: 10px; font-size: 14px;">Login is required to submit this form.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Inquiry End -->
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h1>Wasana Products</h1>
+                            <p>
+                                Trusted manufacturer of medicine envelopes (paper bags) for pharmacies and dispensaries in Sri Lanka since 2012. We specialize in high-quality packaging solutions for the pharmaceutical industry.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="product-list.html">Products</a></li>
+                                <li><a href="cart.html">Inquiry Cart</a></li>
+                                <li><a href="checkout.html">Finalize Inquiry</a></li>
+                                <li><a href="inquiry.html">Order Inquiry</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Our Products</h3>
+                            <ul>
+                                <li><a href="product-detail.html?product=pure-white">Pure White Envelopes</a></li>
+                                <li><a href="product-detail.html?product=inside-printed">Inside Printed</a></li>
+                                <li><a href="product-detail.html?product=sealed-printed">Sealed Printed</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-widget">
+                            <h3 class="title">Get in Touch</h3>
+                            <div class="contact-info">
+                                <p><i class="fa fa-map-marker"></i>Sri Lanka</p>
+                                <p><i class="fa fa-envelope"></i>info@wasanaproducts.lk</p>
+                                <p><i class="fa fa-phone"></i>+94 XX XXX XXXX</p>
+                                <p><i class="fa fa-whatsapp"></i>WhatsApp: +94 XX XXX XXXX</p>
+                                <div class="social">
+                                    <a href="https://wa.me/94XXXXXXXXX" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-phone"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row payment">
+                    <div class="col-md-12">
+                        <div class="payment-method" style="text-align: center;">
+                            <p style="color: #ffffff; font-size: 18px; margin-bottom: 15px;">Delivery Zones: Rathnapura, Balangoda, Niwithigala, Kalawana, Rakwana | Island-wide Cash on Delivery Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright">
+                        <p>COPYRIGHT &copy; <a href="index.html">Wasana Products</a>. All Rights Reserved. Since 2012</p>
+                    </div>
+
+                    <div class="col-md-6 template-by">
+                        <p>Template Designed By <a href="https://htmlcodex.com" target="_blank">HTML Codex</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/slick/slick.min.js"></script>
+
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+        <script src="js/cart-storage.js"></script>
+        <script src="js/inquiry.js"></script>
+    </body>
+</html>
