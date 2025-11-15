@@ -124,6 +124,24 @@
         slidesToScroll: 1,
         adaptiveHeight: true
     });
+
+    $('.testimonial-slider').slick({
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
     
     
     // Product Slider 4 Column
