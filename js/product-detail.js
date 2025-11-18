@@ -8,7 +8,7 @@
             title: 'Pure White Medicine Envelopes',
             price: 'LKR 2,500',
             description: 'Premium quality white paper envelopes designed specifically for pharmacies and dispensaries. Made with high-quality paper to ensure durability and professional appearance. Each bundle contains 1000 envelopes.',
-            image: 'img/product-1.png',
+            image: 'img/product1.png',
             descTitle: 'Pure White Medicine Envelopes',
             descText: 'Our Pure White Medicine Envelopes are manufactured using premium quality paper to ensure durability and a professional appearance. These envelopes are specifically designed for use in pharmacies and dispensaries across Sri Lanka.'
         },
@@ -16,7 +16,7 @@
             title: 'Inside Printed Envelopes',
             price: 'LKR 3,000',
             description: 'White envelopes with printed text inside. Perfect for pharmacies that need to include medication instructions or branding. Made with quality paper and professional printing. Each bundle contains 1000 envelopes.',
-            image: 'img/product-2.png',
+            image: 'img/product2.png',
             descTitle: 'Inside Printed Envelopes',
             descText: 'These envelopes feature professional printing on the inside, making them ideal for pharmacies that want to include medication instructions, branding, or other information. Manufactured with high-quality paper and printing standards.'
         },
@@ -24,7 +24,7 @@
             title: 'Sealed Printed Envelopes',
             price: 'LKR 3,500',
             description: 'Professional sealed envelopes with printing. These premium envelopes offer both functionality and branding opportunities. Each bundle contains 1000 envelopes.',
-            image: 'img/product-3.png',
+            image: 'img/product1.png',
             descTitle: 'Sealed Printed Envelopes',
             descText: 'Our Sealed Printed Envelopes are the premium option, featuring professional sealing and printing capabilities. These are ideal for pharmacies looking for the highest quality packaging solution with branding options.'
         }
